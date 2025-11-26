@@ -7,6 +7,7 @@ interface CardProps {
   variant?: "default" | "glass" | "gradient" | "bordered";
   hover?: boolean;
   id?: string;
+  onClick?: () => void;
 }
 
 export function Card({
@@ -15,6 +16,7 @@ export function Card({
   variant = "default",
   hover = true,
   id,
+  onClick,
 }: CardProps) {
   const variants = {
     default: "bg-white shadow-lg border border-gray-100",
@@ -26,6 +28,7 @@ export function Card({
   return (
     <div
       id={id}
+      onClick={onClick}
       className={`rounded-2xl overflow-hidden ${variants[variant]} ${
         hover ? "hover-lift" : ""
       } ${className}`}
