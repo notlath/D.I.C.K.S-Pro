@@ -6,6 +6,7 @@ interface CardProps {
   className?: string;
   variant?: "default" | "glass" | "gradient" | "bordered";
   hover?: boolean;
+  id?: string;
 }
 
 export function Card({
@@ -13,6 +14,7 @@ export function Card({
   className = "",
   variant = "default",
   hover = true,
+  id,
 }: CardProps) {
   const variants = {
     default: "bg-white shadow-lg border border-gray-100",
@@ -23,6 +25,7 @@ export function Card({
 
   return (
     <div
+      id={id}
       className={`rounded-2xl overflow-hidden ${variants[variant]} ${
         hover ? "hover-lift" : ""
       } ${className}`}
