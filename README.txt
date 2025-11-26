@@ -1,1 +1,0 @@
-You need to UNZIP the files first and INSTALL the fonts used for this HTML to make sure that the website is fully functioning. 
